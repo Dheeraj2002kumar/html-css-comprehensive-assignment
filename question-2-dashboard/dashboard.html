@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateTech Admin Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <h2 class="sidebar-logo">InnovateTech Admin</h2>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active">Dashboard</li>
+                <li>Products</li>
+                <li>Users</li>
+                <li>Analytics</li>
+                <li>Settings</li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <img src="images/user-avatar.png" alt="Admin Profile Photo">
+            <p>Admin</p>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <h1>Dashboard Overview</h1>
+        <div class="header-actions">
+            <input type="search" placeholder="Search..." aria-label="Search">
+            <button class="icon-btn" title="Notifications">Notifications</button>
+            <button class="icon-btn" title="User Profile">User Profile</button>
+        </div>
+    </header>
+
+    <!-- Main Area -->
+    <main>
+        <!-- Stats Section -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Revenue</h3>
+                <p>$125,000</p><small class="positive">+12%</small>
+            </div>
+            <div class="stat-card">
+                <h3>Users</h3>
+                <p>8,450</p><small class="positive">+5%</small>
+            </div>
+            <div class="stat-card">
+                <h3>Orders</h3>
+                <p>1,230</p><small class="negative">-3%</small>
+            </div>
+            <div class="stat-card">
+                <h3>Growth</h3>
+                <p>24%</p><small class="positive">+8%</small>
+            </div>
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section class="tables-section">
+            <h2>Recent Orders</h2>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>John Doe</td>
+                            <td>Website Design</td>
+                            <td>$1,200</td>
+                            <td><span class="badge success">Completed</span></td>
+                            <td>Nov 1</td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>Jane Smith</td>
+                            <td>Mobile App</td>
+                            <td>$2,500</td>
+                            <td><span class="badge warning">Pending</span></td>
+                            <td>Nov 3</td>
+                        </tr>
+                        <tr>
+                            <td>#1003</td>
+                            <td>Mike Johnson</td>
+                            <td>Consulting</td>
+                            <td>$800</td>
+                            <td><span class="badge success">Completed</span></td>
+                            <td>Nov 4</td>
+                        </tr>
+                        <tr>
+                            <td>#1004</td>
+                            <td>Sarah Lee</td>
+                            <td>E-commerce</td>
+                            <td>$3,400</td>
+                            <td><span class="badge danger">Cancelled</span></td>
+                            <td>Nov 5</td>
+                        </tr>
+                        <tr>
+                            <td>#1005</td>
+                            <td>Chris Brown</td>
+                            <td>SEO</td>
+                            <td>$950</td>
+                            <td><span class="badge success">Completed</span></td>
+                            <td>Nov 6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- User Analytics -->
+            <h2>User Analytics</h2>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>User Type</th>
+                            <th>Count</th>
+                            <th>%</th>
+                            <th>Trend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>New Users</td>
+                            <td>520</td>
+                            <td>12%</td>
+                            <td>📈</td>
+                        </tr>
+                        <tr>
+                            <td>Returning Users</td>
+                            <td>7,930</td>
+                            <td>88%</td>
+                            <td>➡️</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Total Users: 8,450</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Add Product Form -->
+        <section class="quick-actions">
+            <h2>Add New Product</h2>
+            <form class="product-form">
+                <fieldset>
+                    <legend>Product Information</legend>
+                    <label>Product Name <input type="text" required></label>
+                    <label>Category
+                        <select>
+                            <option>Software</option>
+                            <option>Hardware</option>
+                            <option>Service</option>
+                        </select>
+                    </label>
+                    <label>Price ($)<input type="number" min="0" max="10000"></label>
+                    <label>SKU/Code <input type="text" pattern="[A-Z0-9]{4,10}"></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Inventory</legend>
+                    <label>Stock Quantity <input type="number" min="0"></label>
+                    <label>Reorder Level <input type="number" min="0"></label>
+                    <label>Supplier
+                        <select>
+                            <option>Supplier A</option>
+                            <option>Supplier B</option>
+                            <option>Supplier C</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Media</legend>
+                    <label>Product Image <input type="file" accept="image/*"></label>
+                    <label><input type="checkbox"> Featured Product</label>
+                    <div class="radio-group">
+                        <p>Active Status:</p>
+                        <label><input type="radio" name="status" checked> Active</label>
+                        <label><input type="radio" name="status"> Inactive</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">Save</button>
+                    <button type="button" class="btn-secondary">Save & Continue</button>
+                    <button type="reset" class="btn-danger">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- JS: Sidebar Toggle -->
+    <script>
+        document.querySelector('.menu-toggle').onclick = () => {
+            document.getElementById('sidebar').classList.toggle('open');
+        };
+    </script>
+</body>
+
+</html>
